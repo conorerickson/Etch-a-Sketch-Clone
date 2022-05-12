@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sketchpad</title>
+  <link rel="stylesheet" href="CSS/reset.css">
+  <link rel="stylesheet" href="CSS/styles.css">
+</head>
+<body>
+  <div class="title"><h1>Sketchpad</h1></div>
+  <div class="drawingMode">Mode: Drawing </div>
+  <div class="container"> 
+      <div class="content">
+        <div class="board"></div>
+          <div class="buttons">
+            <button onclick="defaultColor()">Black</button>
+            <button onclick="eraser()">Eraser</button>
+            <input type="color" id="colorPicker" name="colorPicker"
+           value="#00000" onclick="changeColor()">
+            <div>
+              <input type="text"
+                placeholder="Board Size"
+                value="16"
+                onchange = "changeGrid(this.value)"
+                class="userInput">
+              <button>Set Size</button>
+              <button onclick="reset()">Reset</button>
+            </div>
+          </div>
+      </div>  
+  </div>
+<script src="JS/app.js"></script>
+</body>
+</html>
